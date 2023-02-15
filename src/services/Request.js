@@ -2,7 +2,6 @@ import axios from "axios";
 
 const key = '1046af522affede586d61344e4e71a40';
 const id = localStorage.getItem('movieId');
-console.log(id)
 
 export const requests = {
     requestPopular: `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`,

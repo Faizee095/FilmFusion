@@ -1,15 +1,11 @@
-import React, { useEffect } from "react";
 import { useContext  } from "react";
 import filmContext from "../context/store";
-import { Link , useNavigate , useParams  } from "react-router-dom";
+import { Link   } from "react-router-dom";
 
 const Movie = ({ item }) => {
   const { setMovieId } = useContext(filmContext);
-  const { id : ID}  = useParams();
-  const navigate = useNavigate();
   const handleClick = (id) => {
     setMovieId(id);
-    // navigate(`/movie/${id}`)
   };
 
   return (

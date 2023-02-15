@@ -1,11 +1,9 @@
-import React, { useEffect, useState, useContext } from "react";
-import filmContext from "../context/store";
+import React, { useEffect, useState } from "react";
 import { getFilmDetails } from "../services/Request";
 import { useParams } from 'react-router-dom';
 
 const MovieInfo = () => {
   const [movieDetails, setMovieDetails] = useState([]);
-  const { movieID } = useContext(filmContext);
   const { id } = useParams();
 
   useEffect(() => {
@@ -13,7 +11,7 @@ const MovieInfo = () => {
       setMovieDetails(resp);
     });
     localStorage.setItem('movieId' , id);
-  }, []);
+  }, [id]);
 
 
   return (
