@@ -1,6 +1,7 @@
-import { useContext  } from "react";
+import { useContext } from "react";
 import filmContext from "../context/store";
-import { Link   } from "react-router-dom";
+import { Link } from "react-router-dom";
+import {  FaRegHeart } from 'react-icons/fa';
 
 const Movie = ({ item }) => {
   const { setMovieId } = useContext(filmContext);
@@ -23,9 +24,12 @@ const Movie = ({ item }) => {
           <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center">
             {item?.title}
           </p>
+          <p>
+            <FaRegHeart className="absolute top-4 left-4 text-gray-300" />
+          </p>
         </div>
       </div>
-   </Link>
+    </Link>
   );
 };
 

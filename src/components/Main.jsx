@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getFilmDetails, getPopularFilms } from "../services/Request";
+import { getFilmDetails, getFilmVideo, getPopularFilms } from "../services/Request";
 
 const Main = () => {
   const [movies, setMovies] = useState([]);

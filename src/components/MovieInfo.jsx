@@ -16,10 +16,7 @@ const MovieInfo = () => {
 
   return (
     <>
-      <div>
-        <div>Hello Details</div>
-      </div>
-      <div className="w-full h-full mt-8">
+      <div className="w-full h-full">
         <img
           className="w-full h-[400px] object-cover"
           src={`https://image.tmdb.org/t/p/original/${movieDetails?.backdrop_path}`}
